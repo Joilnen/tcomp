@@ -1,6 +1,8 @@
 # tcomp
 Teoria da Computação
 
+Função = f(n) = 3n^2 + 2n
+
 - Entrada - BnB
 - BnB CPY1 -> BnBnB
 - BnBnB CPY2 -> BnBnBnBnB
