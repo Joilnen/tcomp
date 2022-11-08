@@ -10,69 +10,79 @@
 		</block>
 		<block id="1" name="MR">
 			<tag>MR.jff</tag>
-			<x>154.0</x>
-			<y>45.0</y>
+			<x>148.0</x>
+			<y>44.0</y>
 		</block>
 		<block id="2" name="CPY">
 			<tag>CPY.jff</tag>
-			<x>223.0</x>
-			<y>44.0</y>
+			<x>224.0</x>
+			<y>45.0</y>
 		</block>
 		<block id="3" name="MULT">
 			<tag>MULT.jff</tag>
-			<x>300.0</x>
-			<y>46.0</y>
+			<x>146.0</x>
+			<y>107.0</y>
 		</block>
 		<block id="4" name="CPY">
 			<tag>CPY.jff</tag>
-			<x>80.0</x>
-			<y>117.0</y>
+			<x>225.0</x>
+			<y>109.0</y>
 		</block>
 		<block id="5" name="MR">
 			<tag>MR.jff</tag>
-			<x>150.0</x>
-			<y>118.0</y>
+			<x>294.0</x>
+			<y>106.0</y>
 		</block>
 		<block id="6" name="CPY">
 			<tag>CPY.jff</tag>
-			<x>224.0</x>
-			<y>120.0</y>
+			<x>79.0</x>
+			<y>187.0</y>
 		</block>
 		<block id="7" name="A">
 			<tag>A.jff</tag>
-			<x>302.0</x>
-			<y>118.0</y>
+			<x>146.0</x>
+			<y>187.0</y>
 		</block>
 		<block id="8" name="ML">
 			<tag>MLjff.jff</tag>
-			<x>80.0</x>
-			<y>179.0</y>
+			<x>230.0</x>
+			<y>181.0</y>
 		</block>
 		<block id="9" name="A">
 			<tag>A.jff</tag>
-			<x>153.0</x>
-			<y>183.0</y>
+			<x>298.0</x>
+			<y>178.0</y>
 		</block>
 		<block id="10" name="ML">
 			<tag>MLjff.jff</tag>
-			<x>225.0</x>
-			<y>183.0</y>
+			<x>79.0</x>
+			<y>254.0</y>
 		</block>
 		<block id="11" name="A">
 			<tag>A.jff</tag>
-			<x>299.0</x>
-			<y>179.0</y>
+			<x>153.0</x>
+			<y>253.0</y>
 		</block>
 		<block id="12" name="ML">
 			<tag>MLjff.jff</tag>
-			<x>80.0</x>
-			<y>241.0</y>
+			<x>233.0</x>
+			<y>250.0</y>
 		</block>
 		<block id="13" name="A">
 			<tag>A.jff</tag>
-			<x>155.0</x>
-			<y>243.0</y>
+			<x>307.0</x>
+			<y>253.0</y>
 			<final/>
+		</block>
+		<block id="14" name="MR">
+			<tag>MR.jff</tag>
+			<x>287.0</x>
+			<y>43.0</y>
+		</block>
+		<block id="15" name="CPY">
+			<tag>CPY.jff</tag>
+			<x>72.0</x>
+			<y>111.0</y>
 		</block>
 		<!--The list of automata-->
 		<MLjff.jff>
@@ -243,11 +253,11 @@
 			</block>
 			<!--The list of transitions.-->
 			<transition>
-				<from>1</from>
-				<to>2</to>
-				<read>1</read>
-				<write>X</write>
-				<move>R</move>
+				<from>3</from>
+				<to>4</to>
+				<read>B</read>
+				<write>1</write>
+				<move>L</move>
 			</transition>
 			<transition>
 				<from>0</from>
@@ -278,6 +288,13 @@
 				<move>L</move>
 			</transition>
 			<transition>
+				<from>2</from>
+				<to>3</to>
+				<read>B</read>
+				<write>B</write>
+				<move>R</move>
+			</transition>
+			<transition>
 				<from>1</from>
 				<to>1</to>
 				<read>X</read>
@@ -307,24 +324,17 @@
 			</transition>
 			<transition>
 				<from>1</from>
+				<to>2</to>
+				<read>1</read>
+				<write>X</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>1</from>
 				<to>5</to>
 				<read>B</read>
 				<write>B</write>
 				<move>L</move>
-			</transition>
-			<transition>
-				<from>3</from>
-				<to>4</to>
-				<read>B</read>
-				<write>1</write>
-				<move>L</move>
-			</transition>
-			<transition>
-				<from>2</from>
-				<to>3</to>
-				<read>B</read>
-				<write>B</write>
-				<move>R</move>
 			</transition>
 			<transition>
 				<from>0</from>
@@ -341,6 +351,39 @@
 			<Machine3/>
 			<Machine5/>
 		</CPY.jff>
+		<MR.jff>
+			<!--The list of states.-->
+			<block id="0" name="q0">
+				<tag>Machine0</tag>
+				<x>93.0</x>
+				<y>182.0</y>
+				<initial/>
+			</block>
+			<block id="1" name="q1">
+				<tag>Machine1</tag>
+				<x>219.0</x>
+				<y>182.0</y>
+				<final/>
+			</block>
+			<!--The list of transitions.-->
+			<transition>
+				<from>1</from>
+				<to>1</to>
+				<read>1</read>
+				<write>1</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>0</from>
+				<to>1</to>
+				<read>B</read>
+				<write>B</write>
+				<move>R</move>
+			</transition>
+			<!--The list of automata-->
+			<Machine0/>
+			<Machine1/>
+		</MR.jff>
 		<MULT.jff>
 			<!--The list of states.-->
 			<block id="0" name="A">
@@ -1484,38 +1527,5 @@
 				<Machine1/>
 			</MR.jff>
 		</MULT.jff>
-		<MR.jff>
-			<!--The list of states.-->
-			<block id="0" name="q0">
-				<tag>Machine0</tag>
-				<x>93.0</x>
-				<y>182.0</y>
-				<initial/>
-			</block>
-			<block id="1" name="q1">
-				<tag>Machine1</tag>
-				<x>219.0</x>
-				<y>182.0</y>
-				<final/>
-			</block>
-			<!--The list of transitions.-->
-			<transition>
-				<from>1</from>
-				<to>1</to>
-				<read>1</read>
-				<write>1</write>
-				<move>R</move>
-			</transition>
-			<transition>
-				<from>0</from>
-				<to>1</to>
-				<read>B</read>
-				<write>B</write>
-				<move>R</move>
-			</transition>
-			<!--The list of automata-->
-			<Machine0/>
-			<Machine1/>
-		</MR.jff>
 	</automaton>
 </structure>
